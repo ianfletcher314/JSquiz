@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="reset" href="Assets/reset.css">
+        <link rel="stylesheet" href="Assets/style.css">
+    </head>
+    <body>
+        <!--this is where the basic starting html is ie: the start button, header saying JS quiz, and timer maybe?-->
+        <div class="headerContainer">
+            <header id="quizHeader">Ian Fletcher's JS Quiz</header>
+            <header id="timerText" class="timerClass">Timer : ___</header>
+        </div>
+            
+        <div class="bigContainer">
+           
+            <button id="startButton" class="startButtonClass">Start!</button>
+
+
+            <!--these are the empty divs that the questions and answers will be put into throught JS -->
+            <div id="questionHeader" class="hide" >
+                Is Java Script the best language?
+            </div>
+    
+
+            <div id="questionAnswers" class="hide">
+                <button id="answerA" class="buttonStyle">Yes</button>
+                <button id="answerB" class="buttonStyle">No</button>
+                <button id="answerC" class="buttonStyle">Maybe</button>
+                <button id="answerD" class="buttonStyle">Duh</button>
+
+            </div>
+        </div>
+        <div id="hiScoresButton" class="hide" >
+            <button class="startButtonClass">High Scores!</button>
+        </div>
+
+
+        <!--this is where JS sheet is attached-->
+        <script src="Assets/script.js"></script>
+    </body>
+    <footer id="footer">
+
+    </footer>
+</html>

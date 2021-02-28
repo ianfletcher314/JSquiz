@@ -1,0 +1,99 @@
+body{
+    margin: 0%;
+    background-color: aqua;
+}
+.countDown {
+    margin-right: 10vh;
+}
+.headerContainer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 20vh;
+
+}
+#quizHeader {
+    margin-left: 5vh;
+}
+.timerClass {
+    margin-right: 5vh;
+}
+.bigContainer {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+.bigContainer2 {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+#questionHeader {
+    display: grid;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#questionAnswers {
+    display: grid;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.buttonStyle {
+    margin-top: 4vh;
+    width: 45vh;
+    font-size: 30px;
+    box-shadow: 5px 10px #888888;
+
+}
+
+header {
+    /* display: grid; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    align-content: center;
+    font-size: 39px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.startButtonClass {
+    margin-top: 30vh;
+    height: 20vh;
+    width: 50vh;
+    font-size: 30px;
+    box-shadow: 5px 10px #888888;
+}
+
+.hide {
+    display: none!important; 
+    /* visibility: hidden; */
+    height: 0%;
+    width: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+footer{
+    background-color: aqua;
+}
+#hiScoresButton {
+    height:1%
+}
