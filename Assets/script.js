@@ -44,12 +44,28 @@ function optionClicked(event){
     if (currentQuestion.end === true){
         // this stops timer and prompts initials
         clearInterval(intervalID)
-        var initials = prompt("Please enter your initials!")
-        console.log(initials)
-        console.log(count)
+        var intials = prompt('what is your intials?')
+        var highscores = []
+        if (localStorage.getItem('highscores')){
+            highscores = JSON.parse(localStorage.getItem('highscores'))
+        }
+        highscores.push({
+            initals: intials,
+            time: count
+        })
+        localStorage.setItem('highscores', JSON.stringify(highscores))
+        
+
+
+
+
+
+        // var initials = prompt("Please enter your initials!")
+        // console.log(initials)
+        // console.log(count)
         // this adds initials and time to local storage
-        localStorage.setItem("Initials",initials)
-        localStorage.setItem("Time", count)
+        // localStorage.setItem("Initials",initials)
+        // localStorage.setItem("Time", count)
         // this hides the questions  and brings up the high scores page button
         questionAnswersElement.classList.add("hide")
         questionHeaderElement.classList.add("hide")
@@ -110,9 +126,16 @@ function startGame() {
             hiScoresButtonElement.classList.remove("hide")
             hiScoresButtonElement.classList.add("bigContainer2")
             timerTextElement.textContent = "GAME OVER"
-            var initials = prompt("Please enter your initials!")
-            localStorage.setItem("Initials",initials)
-            localStorage.setItem("Time", count)
+            var intials = prompt('what is your intials?')
+            var highscores = []
+            if (localStorage.getItem('highscores')){
+                highscores = JSON.parse(localStorage.getItem('highscores'))
+            }
+            highscores.push({
+                initals: intials,
+                time: count
+            })
+            localStorage.setItem('highscores', JSON.stringify(highscores))
 
 
 
