@@ -1,22 +1,4 @@
-/*
-1) you load the app and you are looking at a page built with a start button, a timer, and link to high scores list
-
-2) you click the start button and A) the timer starts to count down from 60 with the condition that if it stops at 0 the 
-entire game stops and records the score in local storage B) you are prompted with a serries of multiple choice questions and answers 
- (probably a header and 4 buttons with query selectors created in js and appended?? into an empty div in the HTML) 
-with the condition that if you answer all of the questions before the timer stops the game stops and your score is recorded in local storage
-
-3) when user select their answer for the first question this answer is set to a variable and compared to a variable containing the
-correct answer. if they are equal the next question imediately prompts. if they are not equal 10 secconds come off the clock and 
-the new quetion is prompted 
-
-first build a site that works without the time deduction then add the time deduction in
-
-there will be an event listener on the start button and then every function that is triggered by the start button will have event listeners
-for each possible answer that all trigger the next function 
-*/
-
-/*this is where we set html elements to variables to toggle their display to "none" in the function started by the strtbttn event listener */
+// this is the section where I create my variables
 var startButtonElement = document.getElementById("startButton")
 var questionAnswersElement = document.getElementById("questionAnswers")
 var questionHeaderElement = document.getElementById("questionHeader")
@@ -26,7 +8,6 @@ var intervalID;
 var questionIndex = 0;
 // this variable sets count 
 var count = 60; 
-
 
 // this is the new function to hear if an answer was clicked and if so to call the modifyQuestions function to change the question
 function optionClicked(event){
@@ -44,57 +25,45 @@ function optionClicked(event){
     if (currentQuestion.end === true){
         // this stops timer and prompts initials
         clearInterval(intervalID)
-        var intials = prompt('what is your intials?')
+        function lengthFunction(){
+            if (initals.length > 3){
+                var initals = prompt('sorry you must put in 3 letters or numbers')
+                lengthFunction
+                console.log("length function runs perfectly")
+            }
+        }
+       
+        var initals = prompt('what is your intials? (must be 3 letters or numbers)')
+        console.log(initals)
+        lengthFunction
+       
         var highscores = []
         if (localStorage.getItem('highscores')){
             highscores = JSON.parse(localStorage.getItem('highscores'))
         }
         highscores.push({
-            initals: intials,
+            initals: initals,
             time: count
         })
         localStorage.setItem('highscores', JSON.stringify(highscores))
-        
-
-
-
-
-
-        // var initials = prompt("Please enter your initials!")
-        // console.log(initials)
-        // console.log(count)
-        // this adds initials and time to local storage
-        // localStorage.setItem("Initials",initials)
-        // localStorage.setItem("Time", count)
         // this hides the questions  and brings up the high scores page button
         questionAnswersElement.classList.add("hide")
         questionHeaderElement.classList.add("hide")
         hiScoresButtonElement.classList.remove("hide")
         hiScoresButtonElement.classList.add("bigContainer2")
-        
     }
     questionIndex++;
     modifyQuestions();
 }
+
+// this is the modify questions function that is used to change the question you are on to the next question
 function modifyQuestions() {
     var currentQuestion = questions[questionIndex];
     questionHeaderElement.textContent = currentQuestion.title;
-
-    //this could be condensed in a for-loop
-    // var newOption = document.createElement("button")
-    // newOption.textContent = currentQuestion[i]
-    // questionHeaderElement.appendChild(newOption)
     document.getElementById("answerA").textContent = currentQuestion.choices[0];
-    
     document.getElementById("answerB").textContent = currentQuestion.choices[1];
-    
     document.getElementById("answerC").textContent = currentQuestion.choices[2];
-    
     document.getElementById("answerD").textContent = currentQuestion.choices[3];
-    
-
-    
-
 }
 
 
@@ -144,10 +113,6 @@ function startGame() {
 
 }
 
-
-
-
-
 /*this is the event listener for the initial start button click. when clicked it calls the "startGame function which starts the timer
 and makes the question header and answer elements visible. */
 startButtonElement.addEventListener("click", startGame);
@@ -161,16 +126,7 @@ document.getElementById("answerD").addEventListener("click", optionClicked);
 
 
 
-
-
-
-
-
-
-
-
-
-// list of all questions, choices, and answers
+// list of all questions, choices, and answers for the quiz
 var questions = [
     {
         chioces:["Yes","No","Maybe","Duh"],
