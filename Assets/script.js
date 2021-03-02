@@ -166,9 +166,14 @@ var questions = [
         answer: "console.log"
     },
     {
-        title: "Commonly used data types DO NOT include:",
-        choices: ["strings", "booleans", "alerts", "numbers"],
-        answer: "alerts",
+        title: " ______ JavaScript is also called client-side JavaScript.",
+        choices: ["Microsoft", "Navigator", "LiveWire", "Native"],
+        answer: "Navigator",
+    },
+    {
+        title: " What are variables used for in JavaScript Programs?",
+        choices: ["Storing numbers, dates, or other values", "Varying randomly", "Causing high-school algebra flashbacks", "None of the above"],
+        answer: "Storing numbers, dates, or other values",
         end: true
     }
     
