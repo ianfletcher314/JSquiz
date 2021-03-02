@@ -8,6 +8,7 @@ var intervalID;
 var questionIndex = 0;
 // this variable sets count 
 var count = 60; 
+var initals;
 
 // this is the new function to hear if an answer was clicked and if so to call the modifyQuestions function to change the question
 function optionClicked(event){
@@ -21,21 +22,21 @@ function optionClicked(event){
     if (currentQuestion.answer != button.textContent){
         count = (count - 10)
     }
-    // this is the statement that ends the game if they get through
+    // this is the statement that ends the game 
     if (currentQuestion.end === true){
         // this stops timer and prompts initials
         clearInterval(intervalID)
+        // validate the initials are only 3 letters or numbers
         function lengthFunction(){
+            initals = prompt('sorry you must put in 3 letters or numbers')
             if (initals.length > 3){
-                var initals = prompt('sorry you must put in 3 letters or numbers')
-                lengthFunction
+                lengthFunction()
                 console.log("length function runs perfectly")
+                return
             }
         }
-       
-        var initals = prompt('what is your intials? (must be 3 letters or numbers)')
         console.log(initals)
-        lengthFunction
+        lengthFunction()
        
         var highscores = []
         if (localStorage.getItem('highscores')){

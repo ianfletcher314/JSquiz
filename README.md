@@ -1,90 +1,39 @@
-# 04 Web APIs: Code Quiz
+# JS Quiz
 
-## Your Task
+## The Repository 
+This Repository is where Ian Fletcher's Java Script Quiz is housed. 
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+## Installation
+In order to acess and refractor the code you must first go through the Installation Process.
 
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+1) Open GitHub and navigate to the main repository 
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+2) Click the green "Code" button Above the top right corner of the files 
 
-## User Story
+3) To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click "Use SSH", then click the clipboard icon. To clone a repository using GitHub CLI, click "Use GitHub CLI", then click the clipboard icon.
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+4) Open Terminal and navigate to the directory where you want the repository to be 
 
-## Acceptance Criteria
+5) Type "git clone ", and then paste the SSH, CLI, or HTTPS link you coppied on GitHub and press ENTER 
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+This should put a copy of the repository into the directory you had chosen in step 1
 
-## Mock-Up
+## Usage
+This application should allow users to take a simple Java Script quiz. The quiz has a 60 second timer that begins when the user starts. If the user get an answer wrong 10 seconds are deducted from the timer. If the user finishes all of the questions or the timer hits 0 seconds, they are able to record their score (score = the amount of seconds remaining when the quiz is finished). When the quiz is over the user is able to record their score and initials into a high score leader board which is linked at the end. Have Fun :)
 
-The following animation demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+![alt text](Assets/images/JSquiz1.png)
+![alt text](Assets/images/JSquiz2.png)
 
-## Grading Requirements
+[Check Out The Full Page](https://ianfletcher314.github.io/JSquiz/)
 
-This homework is graded based on the following criteria: 
+## Credits
 
-### Technical Acceptance Criteria: 40%
+- [GitHub's Document on Cloning Repositories (used in Instalation section)](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) 
+- [VS Code's ReadMe Page (used for formating and licensing syntax)](https://github.com/microsoft/vscode/blob/master/README.md)
 
-* Satisfies all of the preceding acceptance criteria.
+## License 
 
-### Deployment: 32%
+Copyright (c) Horision SSS Inc. All Rights Reserved.
 
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-# JSquiz
+Licensed under the [MIT](license.txt) license
