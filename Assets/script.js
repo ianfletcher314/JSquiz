@@ -90,24 +90,34 @@ function startGame() {
         timerTextElement.textContent = count;
         // this stops the game once the timer is 
         if (count < 1) {
-            clearInterval(intervalID)
             questionAnswersElement.classList.add("hide")
             questionHeaderElement.classList.add("hide")
             hiScoresButtonElement.classList.remove("hide")
             hiScoresButtonElement.classList.add("bigContainer2")
             timerTextElement.textContent = "GAME OVER"
-            var intials = prompt('what is your intials?')
+            // this stops timer and prompts initials
+            clearInterval(intervalID)
+            // validate the initials are only 3 letters or numbers
+            function lengthFunction(){
+                initals = prompt('sorry you must put in 3 letters or numbers')
+                if (initals.length > 3){
+                    lengthFunction()
+                    console.log("length function runs perfectly")
+                    return
+                }
+            }
+            console.log(initals)
+            lengthFunction()
             var highscores = []
             if (localStorage.getItem('highscores')){
                 highscores = JSON.parse(localStorage.getItem('highscores'))
             }
             highscores.push({
-                initals: intials,
+                initals: initals,
                 time: count
             })
             localStorage.setItem('highscores', JSON.stringify(highscores))
-
-
+            // this hides the questions  and brings up the high scores page button
 
         }
     }, 1000)
