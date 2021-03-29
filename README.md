@@ -20,6 +20,11 @@ This should put a copy of the repository into the directory you had chosen in st
 
 ## Usage
 This application should allow users to take a simple Java Script quiz. The quiz has a 60 second timer that begins when the user starts. If the user get an answer wrong 10 seconds are deducted from the timer. If the user finishes all of the questions or the timer hits 0 seconds, they are able to record their score (score = the amount of seconds remaining when the quiz is finished). When the quiz is over the user is able to record their score and initials into a high score leader board which is linked at the end. Have Fun :)
+## Languages and Technologies Used
+HTML <br />
+CSS <br />
+Java Script <br />
+
 
 
 ![alt text](Assets/images/JSquiz1.png)
