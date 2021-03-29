@@ -27,8 +27,8 @@ Java Script <br />
 
 
 
-![alt text](Assets/images/JSquiz1.png)
-![alt text](Assets/images/JSquiz2.png)
+![Quiz Main Page Photo](Assets/images/JSquiz1.png)
+![Quiz Photo 2](Assets/images/JSquiz2.png)
 
 [Check Out The Full Page](https://ianfletcher314.github.io/JSquiz/)
 
